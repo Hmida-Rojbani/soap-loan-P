@@ -22,7 +22,7 @@ public class LoanEligebiltyService {
 		if(!(customerRequest.getYearlyIncome() >= 25000)) {
 			mismatchs.add("Client yearly income must be over 25000.");
 		}
-		if(!(customerRequest.getCibilScore().intValue() >= 500)) {
+		if(!(customerRequest.getCibilScore() >= 500)) {
 			mismatchs.add("Client cibil score must be over 500.");
 		}
 		
@@ -35,6 +35,6 @@ public class LoanEligebiltyService {
 			wsResponse.setApprovedAmount(0);
 		}
 		
-		return null;
+		return wsResponse;
 	}
 }

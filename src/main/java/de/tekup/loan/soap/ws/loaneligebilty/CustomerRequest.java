@@ -2,18 +2,16 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.7 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2021.04.13 à 09:44:37 PM WAT 
+// Généré le : 2021.04.13 à 11:04:22 PM WAT 
 //
 
 
 package de.tekup.loan.soap.ws.loaneligebilty;
 
-import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -30,7 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="customerName" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="age" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="yearlyIncome" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="cibilScore" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
+ *         &lt;element name="cibilScore" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="employmentMode" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -55,9 +53,7 @@ public class CustomerRequest {
     protected String customerName;
     protected int age;
     protected long yearlyIncome;
-    @XmlElement(required = true)
-    @XmlSchemaType(name = "positiveInteger")
-    protected BigInteger cibilScore;
+    protected int cibilScore;
     @XmlElement(required = true)
     protected String employmentMode;
 
@@ -120,24 +116,16 @@ public class CustomerRequest {
     /**
      * Obtient la valeur de la propriété cibilScore.
      * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
      */
-    public BigInteger getCibilScore() {
+    public int getCibilScore() {
         return cibilScore;
     }
 
     /**
      * Définit la valeur de la propriété cibilScore.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
      */
-    public void setCibilScore(BigInteger value) {
+    public void setCibilScore(int value) {
         this.cibilScore = value;
     }
 

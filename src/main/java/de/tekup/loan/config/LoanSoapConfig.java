@@ -31,7 +31,7 @@ public class LoanSoapConfig {
 		return new SimpleXsdSchema(new ClassPathResource("loanEligebilty.xsd"));
 	}
 	
-	@Bean(name = "loanEligebilty")
+	@Bean(name = "loanEligeblity")
 	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema schema) {
 		DefaultWsdl11Definition defaultWsdl11Definition = new DefaultWsdl11Definition();
 		defaultWsdl11Definition.setPortTypeName("LoanEligebiltyIndicator");
